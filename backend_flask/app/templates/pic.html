@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="/static/vue.js" type="text/javascript" charset="UTF-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div @click="onClick">
+				<img v-bind:src="my_pic"/>
+			</div>
+			<button v-on:click="onClicked('abc', $event)">click me</button>
+			<button v-on:click="loadDir()">loadDir</button>
+		</div>
+
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					name: 'vue',
+					my_pic: '/static/images/WALL-E.jpg'
+				},
+				methods: {
+					onClicked : function(str, e) {
+						alert('Hello '+this.name+', '+str);
+						console.log(e);
+					},
+					onClick: function(){
+						console.log('pic');
+						alert('pic: ' + this.my_pic);
+					},
+					loadDir: function () {
+						this.axios({
+							method: 'post',
+							url: '/dir/static',
+							data: {'aa':123},
+						})
+						.then((response) => {
+							console.log(response)
+						})
+						.catch((error) => {
+							console.log(error)
+						});
+						//var self = this;
+						//self.$http.post('dir/static', {}, function (data) {
+						//	console.log(data);
+						//});
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

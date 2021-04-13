@@ -35,7 +35,7 @@
 		},
 		methods: {
 			getDirList() {
-				const path = 'http://172.20.1.77:5000/dir';
+				const path = 'http://192.168.3.7:5000/dir';
 				axios.get(path, null, { params: {root:'static'}})
 				.then((res) => {
 					this.my_dirs = res.data;
@@ -46,7 +46,7 @@
 				});
 			},
 			getPicList(pic_dir) {
-				const path = 'http://172.20.1.77:5000/folder/'+pic_dir;
+				const path = 'http://192.168.3.7:5000/folder/'+pic_dir;
 				axios.get(path, null, { params: {root:pic_dir}})
 				.then((res) => {
 					this.my_pics = res.data;

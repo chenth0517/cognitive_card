@@ -1,4 +1,6 @@
 # 从app模块中即从__init__.py中导入创建的webapp应用
+import random
+
 from flask import render_template, jsonify
 import os
 from app import webapp
@@ -44,6 +46,7 @@ def list_file(root):
         print('name: '+file_name)
         if os.path.isfile(path):
             file_vec.append(file_name)
+        random.shuffle(file_vec)
     return jsonify(file_vec)
 
 

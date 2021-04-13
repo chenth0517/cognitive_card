@@ -91,6 +91,6 @@
 		color: #2c3e50;
 		margin-top: 60px;
 	}
-	.my_button{font-size:50px;}
+	.my_button{font-size:40px; width: 200px; margin:10px 10px 10px 10px;}
 	li{ float:left; list-style:none}
 </style>

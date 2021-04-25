@@ -7,8 +7,8 @@ from app import webapp
 
 
 # BASE_PATH = 'E:/test/vueclidemo/src/static'
-# BASE_PATH = 'D:/000/cognitive_card/frontend_vuecli/src/static'
-BASE_PATH = 'D:/cognitive_card/frontend_vuecli/src/static'
+BASE_PATH = 'D:/MyProjects/cognitive_card/frontend_vuecli/src/static'
+# BASE_PATH = 'D:/cognitive_card/frontend_vuecli/src/static'
 
 
 # 建立路由，通过路由可以执行其覆盖的方法，可以多个路由指向同一个方法。

@@ -6,9 +6,10 @@
 				<button class="my_button" type="button" v-on:click="onSwitch(index)">{{item}}</button>
 			</li>
 		</ul>
-		<div v-if="my_dir!=''" @click="onClick">
+		<br>单击图片进行切换</br>
+		<div v-if="my_dir!=''" @click="onClick" class="my_pic_div">
 			<!--button type="button" v-on:click="onClick()">点击切换</button-->
-			<img height="600" width="600" v-bind:src="my_pic"/>
+			<img height="700" v-bind:src="my_pic"/>
 		</div>
 		<!--HelloWorld msg="Welcome to Your Vue.js App"/-->
 	</div>
@@ -20,7 +21,7 @@
 	import axios from 'axios';
 	
 	export default {
-		name: 'App',
+		name: 'app',
 		components: {
 			//HelloWorld,
 		},
@@ -92,5 +93,6 @@
 		margin-top: 60px;
 	}
 	.my_button{font-size:40px; width: 200px; margin:10px 10px 10px 10px;}
+	.my_pic_div{text-align:center}
 	li{ float:left; list-style:none}
 </style>

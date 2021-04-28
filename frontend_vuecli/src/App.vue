@@ -1,16 +1,19 @@
 <template>
 	<div id="app">
 		<!--img alt="Vue logo" src="./assets/logo.png"-->
-		<ul>
-			<li v-for="item, index in my_dirs" :key="index">
-				<button class="my_button" type="button" v-on:click="onSwitch(index)">{{item}}</button>
-			</li>
-		</ul>
 		<br>单击图片进行切换</br>
 		<div v-if="my_dir!=''" @click="onClick" class="my_pic_div">
 			<!--button type="button" v-on:click="onClick()">点击切换</button-->
 			<img height="700" v-bind:src="my_pic"/>
 		</div>
+		<ul>
+			<li v-for="item, index in my_dirs" :key="index">
+				<button class="my_button" type="button" v-on:click="onSwitch(index)">{{item}}</button>
+			</li>
+		</ul>
+		<p>扫码支持一下！</p>
+		<img height="320" src="./assets/wechat.png">
+		<img height="320" src="./assets/alipay.jpg">
 		<!--HelloWorld msg="Welcome to Your Vue.js App"/-->
 	</div>
 </template>
@@ -36,8 +39,7 @@
 		},
 		methods: {
 			getDirList() {
-				//const path = 'http://192.168.3.7:5000/dir';
-				const path = 'http://localhost:5000/dir';
+				const path = 'http://159.75.90.94:5000/dir';
 				axios.get(path, null, { params: {root:'static'}})
 				.then((res) => {
 					this.my_dirs = res.data;
@@ -48,8 +50,7 @@
 				});
 			},
 			getPicList(pic_dir) {
-				//const path = 'http://192.168.3.7:5000/folder/'+pic_dir;
-				const path = 'http://localhost:5000/folder/'+pic_dir;
+				const path = 'http://159.75.90.94:5000/folder/'+pic_dir;
 				axios.get(path, null, { params: {root:pic_dir}})
 				.then((res) => {
 					this.my_pics = res.data;

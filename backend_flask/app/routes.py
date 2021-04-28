@@ -7,7 +7,7 @@ from app import webapp
 
 
 # BASE_PATH = 'E:/test/vueclidemo/src/static'
-BASE_PATH = 'D:/MyProjects/cognitive_card/frontend_vuecli/src/static'
+BASE_PATH = 'C:/MyProject/cognitive_card/frontend_vuecli/src/static'
 # BASE_PATH = 'D:/cognitive_card/frontend_vuecli/src/static'
 
 

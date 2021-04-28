@@ -14,6 +14,8 @@
 		<p>扫码支持一下！</p>
 		<img height="320" src="./assets/wechat.png">
 		<img height="320" src="./assets/alipay.jpg">
+		<p>欢迎关注微信公众号</p>
+		<img height="320" src="./assets/scdlb.png">
 		<!--HelloWorld msg="Welcome to Your Vue.js App"/-->
 	</div>
 </template>
